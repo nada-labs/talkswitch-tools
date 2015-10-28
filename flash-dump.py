@@ -35,7 +35,7 @@ if __name__ == '__main__':
     ffile = open(argv[2], 'wb')
     fbase = int(argv[3], base=0)
     fsize = int(argv[4], base=0)
-    ser = Serial(argv[1], 115200, timeout=0.2)
+    ser = Serial(argv[1], 115200, timeout=0.002)# timeout is 23 bytes
 
     print("Dumping 0x%08X (%i) bytes of memory at 0x%08X" % (fsize, fsize, fbase))
 

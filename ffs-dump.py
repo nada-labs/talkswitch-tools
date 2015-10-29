@@ -3,7 +3,7 @@
 # Dumps files from a FFS flash filesystem image
 #
 # Reverse engineering of the format documented at
-# http://nada-labs.net/2015/
+# http://nada-labs.net/2015/reversing-ffs-file-system
 
 from struct import unpack
 

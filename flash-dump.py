@@ -1,8 +1,13 @@
 #!/usr/bin/env python
+#
+# Dumps memory from a device running the PSPBootloader.
+#
+# Requires that the device is at the bootloader prompt before running.
+# The prompt is typically '(psbl)'
+#
 
 from serial import Serial
 from sys import stdout
-import re
 
 spinny = ['-', '\\', '|', '/']
 
@@ -36,6 +41,7 @@ if __name__ == '__main__':
     if len(argv) != 5:
         print("usage: %s serial_device filename address size" % (argv[0]))
         print("\te.g.: %s /dev/ttyUSB0 flash.img 0xB0000000 0x00800000" % (argv[0]))
+        print("\nMake sure device is at '(psbl)' prompt before running.")
         exit(0)
 
     ffile = open(argv[2], 'wb')
